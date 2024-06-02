@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Lab Analysis</title>
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: .2s linear;
+        }
+
+        body {
+            display: block;
+            background-image: url('https://i.pinimg.com/736x/9b/ff/38/9bff3810a2423dfb55eb15e49d043e72.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 8px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .heading {
+            color: #ffffff;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+            font-size: 50px;
+        }
+
+        .heading2 {
+            color: #faf7f7;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+            font-size: 25px;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .box h3 {
+            margin-top: 0;
+        }
+
+        .box label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .box input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .box .btn {
+            display: inline-block;
+            background: #000000;
+            color: #f8f2f2;
+            font-size: 17px;
+            border-radius: 5px;
+            padding: 8px 25px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        hr {
+            border: none;
+            height: 8px;
+            background-color: #7eedf3;
+            margin: 20px 0;
+        }
+
+        .btn-strong {
+            display: inline-block;
+            background: #000000;
+            color: #f8f2f2;
+            font-size: 17px;
+            border-radius: 5px;
+            padding: 8px 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">AQUA LAB</h1>
+        <h3 class="heading2">Analysis</h3>
+        <hr>
+
+        <form method="POST" action="{% url 'analyze' %}">
+            {% csrf_token %}
+            <div class="box-container">
+                <div class="box">
+                    <h3>pH Measurement</h3>
+                    <label for="ph_value">pH Value:</label>
+                    <input type="text" id="ph_value" name="ph_value" required>
+                </div>
+                <div class="box">
+                    <h3>Turbidity Measurement</h3>
+                    <label for="depth_cm">Depth (cm):</label>
+                    <input type="text" id="depth_cm" name="depth_cm" required>
+                </div>
+                <div class="box">
+                    <h3>TDS Reading</h3>
+                    <label for="weight_dish_filtrate">Weight of the Evaporating Dish + Filtrate (g):</label>
+                    <input type="text" id="weight_dish_filtrate" name="weight_dish_filtrate" required>
+                    <label for="weight_dish">Weight of the Evaporating Dish (g):</label>
+                    <input type="text" id="weight_dish" name="weight_dish" required>
+                    <label for="volume_sample">Volume of the Sample (mL):</label>
+                    <input type="text" id="volume_sample" name="volume_sample" required>
+                </div>
+                <div class="box">
+                    <h3>Hardness</h3>
+                    <label for="znso4_volume">Volume of ZnSO4 Solution Used (mL):</label>
+                    <input type="text" id="znso4_volume" name="znso4_volume" required>
+                    <label for="edta_volume">Burette Reading of EDTA Solution Used (mL):</label>
+                    <input type="text" id="edta_volume" name="edta_volume" required>
+                    <label for="edta_volume_B">Volume of EDTA Used to Titrate Water Sample (mL):</label>
+                    <input type="text" id="edta_volume_B" name="edta_volume_B" required>
+                </div>
+                <div class="box">
+                    <h3>Alkalinity</h3>
+                    <label for="volume_hcl_phenolphthalein">Volume of HCl until Phenolphthalein Endpoint (mL):</label>
+                    <input type="text" id="volume_hcl_phenolphthalein" name="volume_hcl_phenolphthalein" required>
+                    <label for="volume_hcl_methyl_orange">Volume of HCl until Methyl Orange Endpoint (mL):</label>
+                    <input type="text" id="volume_hcl_methyl_orange" name="volume_hcl_methyl_orange" required>
+                </div>
+                <div class="box">
+                    <h2>Analysis</h2>
+                    <p>Let's analyze your water</p>
+                    <button type="submit" class="btn"><strong>Analyze</strong></button>
+                </div>
+                <div class="box">
+                    <h2>Procedures</h2>
+                    <p>Click below to view procedures</p>
+                    <button type="button" class="btn-strong" onclick="location.href='procedure.html';"><strong>View Procedures</strong></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

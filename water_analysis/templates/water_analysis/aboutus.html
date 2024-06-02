@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AquaLabs</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        box-sizing: border-box;
+        background: url('https://i.pinimg.com/736x/9b/ff/38/9bff3810a2423dfb55eb15e49d043e72.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+        padding: 20px 40px; /* increased padding */
+        color: white;
+    }
+    
+    .logo h1 {
+        margin: 0;
+        font-size: 36px; /* increased font size */
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin-left: 20px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        border: 1px solid #ffffff;
+    }
+    
+    main {
+        flex: 1;
+        padding: 20px;
+        color: white; /* ensure text is readable against the background image */
+    }
+    
+    .intro, .services {
+        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background for sections */
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .intro h2, .services h2 {
+        font-size: 22px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+        color: white;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AquaLabs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">pH</a></li>
+                <li><a href="">Turbidity</a></li>
+                <li><a href="">Hardness</a></li>
+                <li><a href="">Alkalinity</a></li>
+                <li><a href="">TDS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>About AquaLabs</h2>
+            <p>Welcome to Aqualabs, where water quality meets innovation. We're dedicated to providing accurate and accessible water analysis through advanced algorithms. Simply input key parameters like pH, TDS, alkalinity, and hardness, and get instant reports on water quality. Our user-friendly interface ensures easy navigation and interpretation of results, empowering individuals, businesses, and communities to make informed decisions about water management. Trust Aqualabs for reliable insights into the water that sustains us all.</p>
+        </section>
+        <section class="services">
+            <h2>Services on AquaLabs</h2>
+            <ul>
+                <li>pH Value Determination</li>
+                <li>Turbidity</li>
+                <li>Hardness</li>
+                <li>Alkalinity Measurement</li>
+                <li>Total Dissolved Solids(TDS) Measurement</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024 AquaLabs | All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

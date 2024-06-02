@@ -1,0 +1,30 @@
+<!-- In analyze_results.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    {% if result_text %}
+    <p>{{ result_text }}</p>
+    {% endif %}
+    <table border="1">
+        <tr>
+            <th>Parameter Name</th>
+            <th>Value</th>
+        </tr>
+        {% for parameter in calculated_parameters %}
+        <tr>
+            <td>{{ parameter.parameter_name }}</td>
+            <td>{{ parameter.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{% url 'download_report' %}">Download Report</a>
+</body>
+</html>
