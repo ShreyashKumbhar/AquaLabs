@@ -1,0 +1,1 @@
+Welcome to the Water Quality Analysis Website! This platform is designed to simplify the process of analyzing water quality based on laboratory experiment readings. By inputting your lab results, our website calculates various water quality parameters and provides a straightforward analysis of the water's condition.
