@@ -13,12 +13,12 @@ def generate_water_quality_report(buffer):
     elements = []
     styles = getSampleStyleSheet()
 
-    # Add a title
+    # Adding a title
     title_style = ParagraphStyle('title', fontSize=18, alignment=1, spaceAfter=12)
     title = Paragraph("Water Quality Analysis Report", title_style)
     elements.append(title)
 
-    # Add parameter details
+    # Adding parameter details
     parameter_data = [['Parameter', 'Value', 'Status']]
     parameters = CalculatedParameter.objects.all()
     for parameter in parameters:
@@ -35,5 +35,5 @@ def generate_water_quality_report(buffer):
                                          ('INNERGRID', (0,0), (-1,-1), 0.25, colors.black)])) 
     elements.append(parameter_table)
 
-    # Generate the report
+    # Generating the report
     doc.build(elements)

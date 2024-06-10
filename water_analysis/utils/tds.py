@@ -7,15 +7,15 @@ def calculate_tds(weight_dish_filtrate, weight_dish, volume_sample):
     return round(tds,2)
 
 def main():
-    # Get the input from the user
+    # Geting the input from the user
     weight_dish_filtrate = float(input("Enter the weight of the evaporating dish + filtrate (in grams): "))
     weight_dish = float(input("Enter the weight of the evaporating dish (in grams): "))
     volume_sample = float(input("Enter the volume of the sample (in mL): "))
 
-    # Calculate the TDS
+    # Calculating the TDS
     tds_measurement = calculate_tds(weight_dish_filtrate, weight_dish, volume_sample)
 
-    # Print the TDS value
+    # Printing the TDS value
     print(f"The TDS measurement is: {tds_measurement:.2f} mg/L")
 
 if __name__ == "__main__":

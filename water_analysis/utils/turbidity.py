@@ -7,13 +7,13 @@ def depth_to_ntu(depth_cm):
     return ntu
 
 def main():
-    # Get the depth reading from the user
+    # Getting the depth reading from the user
     depth_cm = float(input("Enter the depth reading in centimeters: "))
 
-    # Convert the depth reading to NTU
+    # Converting the depth reading to NTU
     ntu_measurement = round(depth_to_ntu(depth_cm))
 
-    # Print the NTU measurement
+    # Printing the NTU measurement
     print(f"The NTU measurement is: {ntu_measurement:.2f} NTU")
 
 if __name__ == "__main__":

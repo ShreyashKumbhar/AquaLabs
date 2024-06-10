@@ -1,7 +1,7 @@
 from django.db import models
 
 class pHReading(models.Model):
-    value = models.DecimalField(max_digits=5, decimal_places=2)  # Example: 7.00
+    value = models.DecimalField(max_digits=5, decimal_places=2) 
 
     def __str__(self):
         return f'pH: {self.value}'
@@ -44,7 +44,7 @@ class CalculatedParameter(models.Model):
         return f'{self.parameter_name}: {self.value}'
 
     def within_standard(self):
-        # Define the logic to check if the parameter value is within the standard
+        # The logic to check if the parameter value is within the standard
         if self.parameter_name == 'pH':
             return 6.5 <= self.value <= 8.5
         elif self.parameter_name == 'hardness':

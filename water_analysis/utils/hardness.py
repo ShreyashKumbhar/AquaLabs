@@ -18,12 +18,12 @@ def main():
     znso4_volume = float(input("Enter the volume of ZnSO4 solution used (in mL): "))
     edta_volume = float(input("Enter the burette reading of EDTA solution used (in mL): "))
 
-    # Calculate the molarity of EDTA
+    # Calculatimng the molarity of EDTA
     edta_molarity = calculate_edta_molarity(znso4_volume / 1000, znso4_concentration, edta_volume / 1000)
     print("Molarity of EDTA:", edta_molarity, "mol/L")
 
     edta_volume_B = float(input("Enter the volume of EDTA used to titrate water sample: "))
-    # Calculate the hardness of water
+    # Calculating the hardness of water
     water_hardness = calculate_hardness(edta_molarity, edta_volume_B)
     print("Hardness of water:", water_hardness, "mg/L")
 

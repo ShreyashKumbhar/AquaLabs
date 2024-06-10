@@ -33,7 +33,7 @@ def main():
     V1 = float(input("Enter the volume of HCl added until phenolphthalein endpoint (in mL): "))
     V2 = float(input("Enter the additional volume of HCl added until methyl orange endpoint (in mL): "))
 
-    # Calculate alkalinity
+    # Calculating the alkalinity
     alkalinity_value, HCO3, CO3, OH = calculate_alkalinity(V1, V2)
 
 if __name__ == "__main__":
